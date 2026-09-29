@@ -4,7 +4,7 @@ Este repositório apresenta a modelagem e simulação de uma vending machine (m�
 O objetivo principal do projeto é demonstrar a aplicação prática da Teoria dos Autômatos na resolução de problemas do mundo real. No modelo desenvolvido, a máquina gerencia o acúmulo de saldo conforme a inserção de moedas, suporta produtos divididos em duas categorias com preço fixo de **R$ 0,30**, permite a inserção livre de valores além do necessário (estabilizando o estado de controle mas preservando o montante para o troco) e realiza o cálculo e a devolução automática do troco ao cliente na finalização.
 A solução foi projetada e espelhada em uma interface web interativa.
 
-Site de simulação: https://isa-cozendey.github.io/vending_machine/
+Site de simulação: https://isa-cozendey.github.io/vending_machineAFD
 
 ## Como funciona
 A máquina aceita moedas de 5¢, 10¢ e 25¢. O autômato gerencia o progresso do crédito até atingir o limiar de 30¢ (estado $S_{30}$), ponto em que as categorias de produtos são liberadas para escolha. O usuário pode continuar inserindo moedas livremente (o estado do autômato permanece em $S_{30}$), e o excedente é devolvido como troco no momento da compra.
@@ -15,7 +15,7 @@ A máquina aceita moedas de 5¢, 10¢ e 25¢. O autômato gerencia o progresso d
 * Cálculo de Troco: O troco é calculado automaticamente ao finalizar a compra com base no valor excedente ($\text{Total Inserido} - 30¢$).
 * Cancelamento / Reset: A qualquer momento, a tecla C limpa o saldo acumulado e retorna o sistema ao estado inicial ($S_0$).
 
-<img width="1221" height="732" alt="image" src="https://github.com/user-attachments/assets/b76cae7a-29ba-48f0-af61-a12f57395c62" />
+![alt text](image.png)
 
 ## Dicionário do Alfabeto (Entradas $\Sigma$)
 
