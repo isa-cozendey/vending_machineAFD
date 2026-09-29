@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Share+Tech+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF9D8; 
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #FF9D50;
+}
+
+.dashboard-header h1 {
+    font-weight: 800;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dashboard-header p {
+    color: #1DCED8;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 1150px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.vending-machine {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 440px;
+    box-shadow: 0 12px 30px rgba(255, 157, 80, 0.18);
+    overflow: hidden;
+    border: 3px solid #FF9D50;
+}
+
+.machine-brand {
+    background: #FF9D50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 4px solid #e68d48;
+}
+
+.machine-brand h2 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.machine-brand span {
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 2px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.glass-window {
+    background: rgba(29, 206, 216, 0.04);
+    height: 220px;
+    margin: 15px;
+    border-radius: 12px;
+    border: 3px solid #1DCED8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: inset 0 0 15px rgba(29, 206, 216, 0.15);
+}
+
+.shelf {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid rgba(29, 206, 216, 0.25);
+    padding-bottom: 8px;
+}
+.shelf:last-child { border-bottom: none; }
+
+.product {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cat-tag {
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    margin-top: 4px;
+}
+.tag-a { background: #FF9D50; }
+.tag-b { background: #1DCED8; color: #111; font-weight: bold; }
+
+/* Painel e Display */
+.control-panel {
+    padding: 0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.led-display {
+    font-family: 'Share Tech Mono', monospace;
+    background: #111;
+    color: #55E07E;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    box-shadow: inset 0 0 10px #55E07E;
+}
+
+.actions-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.panel-section {
+    flex: 1;
+    background: #FFF9D8;
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 2px dashed #FF9D50;
+}
+
+.panel-section p {
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FF9D50;
+    margin-bottom: 8px;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-size: 13px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+button:active {
+    transform: translateY(2px) !important;
+    box-shadow: 0 0 0 !important;
+}
+
+.btn-coin {
+    background: #1DCED8;
+    color: #111;
+    box-shadow: 0 3px 0 #159ba3;
+    flex: 1 1 28%;
+}
+
+.btn-action {
+    background: #FF9D50;
+    color: white;
+    box-shadow: 0 3px 0 #d97d39;
+    flex: 1 1 42%;
+}
+
+.btn-cancel {
+    background: #fff;
+    color: #e04848;
+    border: 2px solid #e04848;
+    box-shadow: 0 3px 0 #e04848;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+.btn-cancel:hover { background: #fff5f5; }
+
+
+.delivery-area {
+    display: flex;
+    gap: 12px;
+    padding: 0 15px 15px 15px;
+}
+
+.drop-box {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 12px 8px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-weight: 600;
+    color: #666;
+    transition: 0.3s;
+    font-size: 13px;
+}
+
+.highlight {
+    background: #55E07E !important;
+    border-color: #3fbf63 !important;
+    color: #111 !important;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(85, 224, 126, 0.4);
+}
+
+
+.mealy-monitor {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 12px 30px rgba(29, 206, 216, 0.12);
+    border: 3px solid #1DCED8;
+}
+
+.monitor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #1DCED8;
+}
+
+.monitor-header h2 {
+    color: #1DCED8;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.state-indicator {
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+}
+
+#current-state-badge {
+    background: #FF9D50;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 5px;
+    box-shadow: 0 2px 5px rgba(255,157,80,0.4);
+}
+
+.log-container {
+    flex: 1;
+    background: #FFF9D8;
+    border: 2px solid rgba(255, 157, 80, 0.35);
+    border-radius: 10px;
+    padding: 12px;
+    overflow-y: auto;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 450px;
+}
+
+.log-entry {
+    background: #FFFFFF;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border-left: 4px solid #55E07E;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    color: #444;
+}
+
+.log-entry b {
+    color: #FF9D50;
+}
+
+.legend {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+    background: #fafafa;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.legend ul {
+    list-style: none;
+    margin-top: 6px;
+}
+
+.legend li {
+    margin-bottom: 3px;
+}
+.legend code {
+    background: #FFF9D8;
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: #FF9D50;
+    font-weight: bold;
+}

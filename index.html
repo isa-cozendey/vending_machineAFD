@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Dashboard de Autômatos</h1>
+        <p>Simulação de Autômato Finito Determinístico (AFD)</p>
+    </div>
+
+    <div class="container">
+        <div class="vending-machine">
+            <div class="machine-brand">
+                <h2>Vending Machine</h2>
+            </div>
+
+            <div class="glass-window">
+                <div class="shelf">
+                    <div class="product">🍫 P <br><span class="cat-tag tag-a">Cat. A (30¢)</span></div>
+                    <div class="product">🥤 Q <br><span class="cat-tag tag-a">Cat. A (30¢)</span></div>
+                </div>
+                <div class="shelf">
+                    <div class="product">🔋 P <br><span class="cat-tag tag-b">Cat. B (30¢)</span></div>
+                    <div class="product">🎧 Q <br><span class="cat-tag tag-b">Cat. B (30¢)</span></div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="led-display" id="display">SALDO: 0¢</div>
+                
+                <div class="actions-grid">
+                    <div class="panel-section">
+                        <p>🪙 INSERIR MOEDAS</p>
+                        <div class="btn-group">
+                            <button class="btn-coin" onclick="sendInput('c')">5¢</button>
+                            <button class="btn-coin" onclick="sendInput('d')">10¢</button>
+                            <button class="btn-coin" onclick="sendInput('v')">25¢</button>
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <p>SELECIONAR</p>
+                        <div class="btn-group">
+                            <button class="btn-action" onclick="sendInput('a')">Cat. A</button>
+                            <button class="btn-action" onclick="sendInput('b')">Cat. B</button>
+                            <button class="btn-action" onclick="sendInput('p')">Prod P</button>
+                            <button class="btn-action" onclick="sendInput('q')">Prod Q</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-cancel" onclick="sendInput('C')">Cancelar (Devolver)</button>
+            </div>
+
+            <div class="delivery-area">
+                <div id="product-drop" class="drop-box">Retirada</div>
+                <div id="coin-return" class="drop-box">🪙 Troco: <span>0¢</span></div>
+            </div>
+        </div>
+
+        <div class="mealy-monitor">
+            <div class="monitor-header">
+                <h2>Monitor de Transições (AFD)</h2>
+                <div class="state-indicator">
+                    Estado Atual: <span id="current-state-badge">S0</span>
+                </div>
+            </div>
+            
+            <div class="log-container" id="log-container">
+            </div>
+            
+            <div class="legend">
+                <strong>Legenda (Transições AFD):</strong>
+                <ul>
+                    <li><code>c, d, v</code> : Inserção de Moedas (5¢, 10¢, 25¢)</li>
+                    <li><code>a, b</code> : Seleção de Categoria (30¢)</li>
+                    <li><code>p, q</code> : Seleção de Produto</li>
+                    <li><code>C</code> : Cancelar / Resetar sistema</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
